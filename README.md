@@ -232,25 +232,6 @@ The `/scan` route is secured via JWT authentication:
 - [ ] **Interactive Voice Analysis**: Scanning audio/voice files for tele-fraud spoofing vectors.
 - [ ] **Localization**: Deep multi-language scanning support for region-specific threat alerts.
 
----
 
-## 🤝 Contributing
 
-Contributions are welcome! Please follow these guidelines:
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
 
----
-
-## 📄 License
-
-Distributed under the **MIT License**. See `LICENSE` for more details.
-
----
-
-<div align="center">
-Built with ❤️ for a safer, scam-free digital world.
-</div>
