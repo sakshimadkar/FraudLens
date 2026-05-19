@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #f3f4f6;
+  --text-muted: #9ca3af;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(0, 0, 0, 0.4);
+  --inner-bg: rgba(0, 0, 0, 0.4);
+  --inner-bg-light: rgba(0, 0, 0, 0.2);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --bg-gradient-1: rgba(112, 0, 255, 0.05);
+  --bg-gradient-2: rgba(0, 242, 255, 0.05);
+  --primary: #00f2ff;
+  --primary-text: #000000;
+  --primary-glow: rgba(0, 242, 255, 0.3);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg-color: #f8fafc;
+  --text-color: #0f172a; 
+  --text-muted: #475569; 
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --inner-bg: rgba(255, 255, 255, 0.6);
+  --inner-bg-light: rgba(255, 255, 255, 0.4);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --bg-gradient-1: rgba(112, 0, 255, 0.1);
+  --bg-gradient-2: rgba(0, 242, 255, 0.1);
+  --primary: #0ea5e9;
+  --primary-text: #ffffff;
+  --primary-glow: rgba(14, 165, 233, 0.3);
+  color-scheme: light;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: #7000ff;
+  --color-dark: var(--bg-color);
+  --color-card: var(--card-bg);
+  --color-inner: var(--inner-bg);
+  --color-inner-light: var(--inner-bg-light);
+  --color-border: var(--glass-border);
+  --color-danger: #ff003c;
+  --color-warning: #ff9d00;
+  --color-success: #00ff88;
+  
+  --color-gray-100: var(--text-color);
+  --color-gray-200: var(--text-color);
+  --color-gray-300: var(--text-muted);
+  --color-gray-400: var(--text-muted);
+  --color-gray-500: var(--text-muted);
+  
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  @apply min-h-screen font-sans transition-colors duration-500;
+  background-image: 
+    radial-gradient(circle at 50% 50%, var(--bg-gradient-1) 0%, transparent 50%),
+    radial-gradient(circle at 0% 0%, var(--bg-gradient-2) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  @apply tracking-tight;
+}
+
+.glass {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  @apply backdrop-blur-xl transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)];
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-text);
+  box-shadow: 0 0 20px var(--primary-glow);
+  @apply px-6 py-2 font-bold rounded-full hover:opacity-90 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply px-6 py-2 bg-secondary text-white font-bold rounded-full hover:bg-secondary/90 transition-all duration-300;
+}
+
+.input-field {
+  background-color: var(--input-bg);
+  border: 1px solid var(--glass-border);
+  @apply w-full px-4 py-3 rounded-xl focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_15px_var(--primary-glow)] transition-all duration-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-all;
+}

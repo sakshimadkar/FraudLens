@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="cyber-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2ff" />
+      <stop offset="100%" stop-color="#7000ff" />
+    </linearGradient>
+  </defs>
+  <!-- Outer Shield -->
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="url(#cyber-gradient)" fill="rgba(0, 242, 255, 0.05)" />
+  <!-- Inner Shield Checkmark/Pattern -->
+  <path d="m9 11.5 2 2 4-4" stroke="#00ff88" stroke-width="2.5" />
+</svg>
